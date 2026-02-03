@@ -23,15 +23,15 @@ const cards = [
 export default function EducationAlumniSection() {
   return (
     <div id="alumni" className="alumni-reveal-wrapper bg-[hsl(40,20%,96%)]">
-      <div className="mx-auto w-full max-w-[66ch] px-4">
-        <header className="alumni-reveal-header grid min-h-[50vh] content-center py-16">
-          <p className="mb-2 font-sans text-sm font-semibold uppercase tracking-widest text-teal-600">
+      <div className="mx-auto w-full max-w-4xl px-4 py-8 md:py-10">
+        <header className="alumni-reveal-header mb-8 md:mb-10">
+          <p className="mb-1.5 font-sans text-sm font-semibold uppercase tracking-widest text-teal-600">
             Our Graduates & Next Steps
           </p>
           <h2 className="font-serif text-3xl font-bold text-[hsl(175,35%,14%)] md:text-4xl">
             Alumni and Future Vision
           </h2>
-          <div className="mt-4 h-1 w-16 rounded-full bg-amber-500" />
+          <div className="mt-2 h-1 w-16 rounded-full bg-amber-500" />
         </header>
 
         <main className="alumni-reveal-main">

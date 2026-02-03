@@ -599,7 +599,7 @@
   gap: var(--alumni-gutter);
   grid-template-columns: auto 1fr;
   align-items: center;
-  min-height: 100vh;
+  min-height: 75vh;
   --alumni-x: -100%;
   --alumni-y: 0;
 }
