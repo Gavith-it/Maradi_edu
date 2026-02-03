@@ -1,0 +1,856 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Maradi Subbaiah Trust - Education · Yoga · Community
+   New theme: Deep teal + warm amber, modern typography (Outfit + DM Sans)
+*/
+
+@layer base {
+  :root {
+    /* Core Brand - Deep teal & warm amber */
+    --heritage-green: 172 42% 28%;
+    --heritage-gold: 38 92% 50%;
+    --heritage-maroon: 12 55% 38%;
+    --warm-white: 40 20% 98%;
+    --heritage-dark: 175 35% 14%;
+    
+    /* Design System */
+    --background: 40 20% 98%;
+    --foreground: 175 35% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 175 35% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 175 35% 14%;
+
+    --primary: 172 42% 28%;
+    --primary-foreground: 40 20% 98%;
+
+    --secondary: 172 20% 92%;
+    --secondary-foreground: 175 35% 14%;
+
+    --muted: 172 15% 94%;
+    --muted-foreground: 172 10% 40%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 175 35% 14%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 20% 98%;
+
+    --border: 172 18% 88%;
+    --input: 172 18% 90%;
+    --ring: 172 42% 28%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(172 42% 22%), hsl(175 35% 14%));
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 50% / 0.12), hsl(12 55% 38% / 0.08));
+    --gradient-accent: linear-gradient(90deg, hsl(38 92% 50%), hsl(38 85% 55%));
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(38 92% 50% / 0.15) 0%, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(172 42% 35% / 0.2) 0%, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(12 55% 38% / 0.08) 0%, transparent 50%);
+
+    --shadow-heritage: 0 10px 40px -10px hsl(var(--heritage-green) / 0.2);
+    --shadow-warm: 0 4px 24px -4px hsl(var(--heritage-gold) / 0.25);
+    --transition-heritage: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --radius: 0.875rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 142 25% 8%;
+    --foreground: 42 15% 95%;
+
+    --card: 142 25% 10%;
+    --card-foreground: 42 15% 95%;
+
+    --popover: 142 25% 10%;
+    --popover-foreground: 42 15% 95%;
+
+    --primary: 142 35% 60%;
+    --primary-foreground: 142 25% 8%;
+
+    --secondary: 142 15% 18%;
+    --secondary-foreground: 42 15% 95%;
+
+    --muted: 142 10% 20%;
+    --muted-foreground: 142 15% 65%;
+
+    --accent: 45 70% 55%;
+    --accent-foreground: 142 25% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 42 15% 95%;
+
+    --border: 142 15% 22%;
+    --input: 142 15% 22%;
+    --ring: 142 35% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Typography - Outfit (headings) + DM Sans (body) */
+  .font-serif {
+    font-family: 'Outfit', system-ui, sans-serif;
+    letter-spacing: -0.03em;
+  }
+  
+  .text-heritage-green {
+    color: hsl(var(--heritage-green));
+  }
+  
+  .text-heritage-gold {
+    color: hsl(var(--heritage-gold));
+  }
+  
+  .text-heritage-maroon {
+    color: hsl(var(--heritage-maroon));
+  }
+
+  .bg-heritage-green {
+    background-color: hsl(var(--heritage-green));
+  }
+  
+  .bg-heritage-gold {
+    background-color: hsl(var(--heritage-gold));
+  }
+  
+  .bg-heritage-maroon {
+    background-color: hsl(var(--heritage-maroon));
+  }
+
+  /* Enhanced Heritage Components */
+  .hero-section {
+    background: linear-gradient(135deg, hsl(var(--heritage-green) / 0.95), hsl(var(--heritage-dark) / 0.9));
+    box-shadow: var(--shadow-heritage);
+    position: relative;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, hsl(var(--heritage-gold) / 0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .heritage-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 4px 20px -4px hsl(var(--heritage-green) / 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .heritage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--heritage-gold) / 0.1), transparent);
+    transition: left 0.8s ease;
+  }
+
+  .heritage-card:hover::before {
+    left: 100%;
+  }
+
+  .heritage-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px -15px hsl(var(--heritage-green) / 0.25);
+    border-color: hsl(var(--heritage-gold) / 0.3);
+  }
+
+  .accent-gradient {
+    background: linear-gradient(135deg, hsl(var(--heritage-gold)), hsl(var(--accent)));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .accent-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent, hsl(var(--heritage-gold) / 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+
+  .accent-gradient:hover::before {
+    transform: translateX(100%);
+  }
+
+  .warm-gradient {
+    background: linear-gradient(135deg, hsl(38 92% 50% / 0.08), hsl(12 55% 38% / 0.06));
+    position: relative;
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--heritage-gold) / 0.3), transparent);
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+  /* Enhanced Text Effects */
+  .text-shadow {
+    text-shadow: 0 2px 4px hsl(var(--heritage-dark) / 0.3);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--heritage-gold) / 0.6);
+  }
+
+  /* Smooth Scroll & anchor offset for sticky nav */
+  html {
+    scroll-behavior: smooth;
+  }
+  [id="education"],
+  [id="yoga-center"],
+  [id="trust"],
+  [id="about-trust"],
+  [id="about-founder"],
+  [id="our-institutions"],
+  [id="services"],
+  [id="contact"] {
+    scroll-margin-top: 5rem;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--heritage-green));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--heritage-dark));
+  }
+
+  /* Scroll/section animations: handled by Framer Motion (useReducedMotion in components). */
+
+  /* Respect prefers-reduced-motion for CSS-only animations */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float,
+    .animate-glow,
+    .animate-pulse {
+      animation: none;
+    }
+    .parallax-hero-wrapper {
+      perspective: none;
+    }
+    .parallax-hero-layer {
+      transform: none !important;
+    }
+  }
+}
+
+/* ========== Pure CSS Multilayer Parallax (Home Hero) ========== */
+.parallax-hero-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+  scroll-behavior: smooth;
+}
+
+.parallax-hero-group {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
+.parallax-hero-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.parallax-hero-layer--back {
+  transform: translateZ(-500px) scale(2.67);
+  z-index: 1;
+}
+
+.parallax-hero-layer--mid {
+  transform: translateZ(-250px) scale(1.83);
+  z-index: 2;
+}
+
+.parallax-hero-layer--front {
+  transform: translateZ(-100px) scale(1.33);
+  z-index: 3;
+}
+
+.parallax-hero-text-layer {
+  background: linear-gradient(
+    180deg,
+    hsl(175 35% 14% / 0.4) 0%,
+    hsl(172 42% 28% / 0.6) 50%,
+    hsl(175 35% 14% / 0.92) 100%
+  );
+  transform: translateZ(0) scale(1);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 1.5rem 4rem 2rem; /* top padding clears fixed SiteHeader */
+}
+
+.parallax-hero-text-layer .parallax-hero-nav {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  z-index: 5;
+}
+
+.parallax-hero-text-layer .parallax-hero-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.parallax-hero-text-layer .parallax-hero-nav-links a,
+.parallax-hero-text-layer .parallax-hero-nav-links button {
+  font-family: Outfit, system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.parallax-hero-text-layer .parallax-hero-nav-links a:hover,
+.parallax-hero-text-layer .parallax-hero-nav-links button:hover {
+  color: hsl(175 35% 14%);
+  background: #fff;
+  border-color: #fff;
+}
+
+.parallax-hero-year-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 1.5rem 0;
+}
+
+.parallax-hero-year-container span {
+  font-family: Outfit, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 12vw, 8rem);
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.parallax-hero-cta-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.parallax-hero-cta-container .btn-primary {
+  background: hsl(38 92% 50%);
+  color: hsl(175 35% 14%);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.parallax-hero-cta-container .btn-primary:hover {
+  background: hsl(38 92% 58%);
+  transform: translateY(-2px);
+}
+
+.parallax-hero-cta-container .btn-outline {
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.parallax-hero-cta-container .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+.parallax-hero-info-section {
+  background: hsl(175 35% 14%);
+  color: #fff;
+  transform: translateZ(0) scale(1);
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  min-height: 60vh;
+}
+
+.parallax-hero-info-section img {
+  width: 85%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.parallax-hero-info-section h2 {
+  font-family: Outfit, system-ui, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.parallax-hero-info-section p {
+  font-family: DM Sans, system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.9;
+  max-width: 32rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .parallax-hero-info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    text-align: left;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .parallax-hero-info-section img {
+    justify-self: end;
+    width: 75%;
+    margin-bottom: 0;
+  }
+
+  .parallax-hero-text-layer .parallax-hero-nav-links li:nth-child(n) {
+    visibility: visible;
+  }
+}
+
+/* ========== Education page: clip-scroll header (image-in-text reveal) ========== */
+.education-clip-header {
+  position: relative;
+}
+
+.education-clip-container {
+  clip: rect(0, auto, auto, 0);
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  mask-image: linear-gradient(to bottom, #ffffff, #ffffff);
+}
+
+.education-clip-container_solid {
+  background: white;
+}
+
+.education-clip-title_wrapper {
+  position: fixed;
+  display: block;
+  margin: auto;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+.education-clip-title {
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 64px);
+  text-transform: none;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 900;
+  line-height: 1.2;
+  padding: 0 1rem;
+}
+
+.education-clip-title_image {
+  color: white;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .education-clip-container_image {
+    background-attachment: scroll;
+  }
+}
+
+/* Education intro section: quote + paragraphs (match reference image) */
+.education-intro-section {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Small quote accent: dots + short line, no overlap with text below */
+.education-intro-quote-deco {
+  height: fit-content;
+}
+
+.education-intro-quote-line {
+  height: 2rem;
+  max-height: 2rem;
+  min-height: 0;
+}
+
+
+/* ========== Alumni and Future Vision: two full-viewport sections, image + text, scroll reveal ========== */
+.alumni-reveal-wrapper {
+  --alumni-content: 66ch;
+  --alumni-gutter: 1rem;
+}
+
+.alumni-reveal-main {
+  width: 100%;
+  max-width: var(--alumni-content);
+  margin: 0 auto;
+}
+
+.alumni-reveal-section {
+  display: grid;
+  gap: var(--alumni-gutter);
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  min-height: 100vh;
+  --alumni-x: -100%;
+  --alumni-y: 0;
+}
+
+.alumni-reveal-section--even {
+  grid-template-columns: 1fr auto;
+  grid-auto-flow: dense;
+  --alumni-x: 100%;
+}
+
+.alumni-reveal-section__img {
+  grid-column: 1;
+  width: 260px;
+  max-width: 20vw;
+  height: auto;
+  object-fit: cover;
+  clip-path: polygon(0 10%, 10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+  scale: 1.5;
+}
+
+.alumni-reveal-section--even .alumni-reveal-section__img {
+  grid-column: 2;
+}
+
+.alumni-reveal-section__content {
+  grid-column: 2;
+  z-index: 2;
+  background: hsl(210 17% 98% / 0.65);
+  padding: 1.5rem;
+  color: hsl(var(--foreground));
+  backdrop-filter: blur(4px);
+  border-radius: 0.75rem;
+  --alumni-x: 0;
+  --alumni-y: 50%;
+}
+
+.alumni-reveal-section--even .alumni-reveal-section__content {
+  grid-column: 1;
+}
+
+.alumni-reveal-section__content p:first-line {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Scroll-driven reveal: section is the timeline subject */
+@supports (animation-timeline: view()) {
+  .alumni-reveal-section {
+    view-timeline-name: --alumni-item;
+    view-timeline-axis: block;
+  }
+
+  .alumni-reveal-section__img {
+    animation: alumni-item-reveal both ease-in;
+    animation-timeline: --alumni-item;
+    animation-range: entry 10% entry 35%;
+  }
+
+  .alumni-reveal-section__content {
+    position: sticky;
+    bottom: 40%;
+    animation: alumni-item-reveal both ease-out;
+    animation-timeline: --alumni-item;
+    animation-range: entry 35% entry 50%;
+  }
+
+  @keyframes alumni-item-reveal {
+    0% {
+      opacity: 0;
+      translate: var(--alumni-x, 0) var(--alumni-y, 0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alumni-reveal-section__img,
+  .alumni-reveal-section__content {
+    animation: none;
+  }
+}
+
+/* ========== Holistic / Beyond the Classroom: 4-card grid with circle clip-path and hover ========== */
+.holistic-offer-section h2 {
+  font-family: "Fraunces", "Outfit", Georgia, serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.holistic-card {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.holistic-card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transition: clip-path 0.6s ease;
+  z-index: 0;
+  background-color: hsl(38 92% 50%);
+  left: 0;
+  top: 0;
+}
+
+.holistic-card:hover {
+  box-shadow: 0 4px 24px 8px rgb(0 0 0 / 40%);
+}
+
+.holistic-card:nth-child(1)::before {
+  bottom: 0;
+  right: 0;
+  left: auto;
+  top: auto;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
+}
+
+.holistic-card:nth-child(2)::before {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+}
+
+.holistic-card:nth-child(3)::before {
+  top: 0;
+  right: 0;
+  left: auto;
+  bottom: auto;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+}
+
+.holistic-card:nth-child(4)::before {
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+}
+
+.holistic-card:hover:nth-child(1)::before {
+  clip-path: circle(110vw at 100% 100%);
+}
+
+.holistic-card:hover:nth-child(2)::before {
+  clip-path: circle(110vw at 0% 100%);
+}
+
+.holistic-card:hover:nth-child(3)::before {
+  clip-path: circle(110vw at 100% 0%);
+}
+
+.holistic-card:hover:nth-child(4)::before {
+  clip-path: circle(110vw at 0% 0%);
+}
+
+.holistic-card:hover .holistic-card__text {
+  color: #fff;
+}
+
+.holistic-card__text {
+  transition: color 0.3s ease;
+}
+
+.holistic-card__circle {
+  display: none;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .holistic-card__circle {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .holistic-card:nth-child(1) .holistic-card__circle {
+    bottom: 0;
+    right: 0;
+    left: auto;
+    top: auto;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
+  }
+
+  .holistic-card:nth-child(2) .holistic-card__circle {
+    bottom: 0;
+    left: 0;
+    right: auto;
+    top: auto;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+  }
+
+  .holistic-card:nth-child(3) .holistic-card__circle {
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+  }
+
+  .holistic-card:nth-child(4) .holistic-card__circle {
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+  }
+}
+
+/* ========== Education Gallery: 3x3 hover grid (container queries + :has) ========== */
+.education-gallery-section [data-gallery-grid] {
+  container-type: inline-size;
+}
+
+@container (min-width: 380px) {
+  .education-gallery-section [data-gallery-grid] > div:first-child {
+    display: grid;
+    grid-template-columns: 30cqmin 30cqmin 30cqmin;
+    gap: 1rem;
+  }
+  .education-gallery-section [data-gallery-grid] > div:first-child:has(> div:nth-child(1):hover) {
+    grid-template-columns: 60cqmin 15cqmin 15cqmin;
+  }
+  .education-gallery-section [data-gallery-grid] > div:first-child:has(> div:nth-child(2):hover) {
+    grid-template-columns: 15cqmin 60cqmin 15cqmin;
+  }
+  .education-gallery-section [data-gallery-grid] > div:first-child:has(> div:nth-child(3):hover) {
+    grid-template-columns: 15cqmin 15cqmin 60cqmin;
+  }
+  /* Each column: 3 rows; hover one row to expand it */
+  .education-gallery-section [data-gallery-grid] .education-gallery-column {
+    display: grid;
+    grid-template-rows: 30cqmin 30cqmin 30cqmin;
+    gap: 1rem;
+  }
+  .education-gallery-section [data-gallery-grid] .education-gallery-column:has(article:nth-child(1):hover) {
+    grid-template-rows: 60cqmin 15cqmin 15cqmin;
+  }
+  .education-gallery-section [data-gallery-grid] .education-gallery-column:has(article:nth-child(2):hover) {
+    grid-template-rows: 15cqmin 60cqmin 15cqmin;
+  }
+  .education-gallery-section [data-gallery-grid] .education-gallery-column:has(article:nth-child(3):hover) {
+    grid-template-rows: 15cqmin 15cqmin 60cqmin;
+  }
+}
