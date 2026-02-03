@@ -6,12 +6,12 @@ import siteLogo from "@/assets/WhatsApp Image 2026-02-01 at 12.45.21.jpeg";
 const Footer = () => {
   return (
     <footer className="bg-heritage-green text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+      <div className="container mx-auto px-4 py-10 md:py-12">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           
           {/* Trust Information */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-4 mb-5">
               <div className="w-16 h-16 bg-white/95 rounded-full p-2 shadow-lg">
                 <img 
                   src={siteLogo} 
@@ -22,7 +22,7 @@ const Footer = () => {
               <h3 className="font-serif text-2xl font-bold">Maradi Subbaiah Trust</h3>
             </div>
             
-            <p className="text-gray-100 leading-relaxed mb-8 text-lg font-light max-w-md">
+            <p className="text-gray-100 leading-relaxed mb-5 text-lg font-light max-w-md">
               For over five decades, we have been dedicated to serving our community through 
               quality education, cultural preservation, and social service initiatives that 
               create lasting positive impact in Bangalore.
@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-xl font-semibold text-heritage-gold mb-6">Quick Links</h4>
+            <h4 className="font-serif text-xl font-semibold text-heritage-gold mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li><Link to="/" className="text-gray-100 hover:text-heritage-gold transition-colors duration-300 flex items-center gap-2 group">Home</Link></li>
               <li><Link to="/education" className="text-gray-100 hover:text-heritage-gold transition-colors duration-300 flex items-center gap-2 group">Education</Link></li>
@@ -64,8 +64,8 @@ const Footer = () => {
 
           {/* Services & Actions */}
           <div>
-            <h4 className="font-serif text-xl font-semibold text-heritage-gold mb-6">Services</h4>
-            <ul className="space-y-3 mb-8">
+            <h4 className="font-serif text-xl font-semibold text-heritage-gold mb-4">Services</h4>
+            <ul className="space-y-3 mb-5">
               <li><Link to="/education" className="text-gray-100 hover:text-heritage-gold transition-colors duration-300">School Admissions</Link></li>
               <li><Link to="/yoga" className="text-gray-100 hover:text-heritage-gold transition-colors duration-300">Venue Bookings</Link></li>
               <li><Link to="/contact" className="text-gray-100 hover:text-heritage-gold transition-colors duration-300">Donations</Link></li>
@@ -82,8 +82,8 @@ const Footer = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="border-t border-heritage-dark mt-16 pt-12">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="border-t border-heritage-dark mt-10 pt-8">
+          <div className="grid md:grid-cols-4 gap-6 mb-8">
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Calendar className="w-5 h-5 text-heritage-gold" />
@@ -116,7 +116,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-heritage-dark pt-8">
+        <div className="border-t border-heritage-dark pt-6">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
