@@ -1,6 +1,7 @@
 import SiteHeader from "@/components/SiteHeader";
 import ParallaxHero from "@/components/ParallaxHero";
 import HomePillarsSection from "@/components/HomePillarsSection";
+import HomeStatsSection from "@/components/HomeStatsSection";
 import HomeStickySlides from "@/components/HomeStickySlides";
 import Footer from "@/components/Footer";
 
@@ -14,6 +15,8 @@ const Index = () => {
         <HomePillarsSection />
         <HomeStickySlides />
       </div>
+
+      <HomeStatsSection />
 
       <Footer />
     </div>

@@ -45,10 +45,13 @@ export default function EducationIntroSection() {
 
           <div className="mt-8 space-y-5 font-sans text-base font-medium leading-relaxed text-muted-foreground md:text-lg">
             <p>
-              Founded under the esteemed Maradi Subbaiah Trust (established in 1972), Sri Maradi Subbaiah Vidya Kendra was started in 1983 with just 5 students, inspired by the vision and motto of Sri Maradi Subbaiah.
+              Founded under the esteemed Maradi Subbaiah Trust (established in 1972), Sri Maradi Subbaiah Vidya Kendra was started in 1983 with just five students, inspired by the vision and motto of Sri Maradi Subbaiah that every child has a right to education.
             </p>
             <p>
-              For over four decades, the school has been a cornerstone of the Hanumantha Nagar community in South Bengaluru, providing quality, value-based education at a nominal cost, accessible to children of all communities irrespective of caste or religion.
+              For over four decades, the school has been a cornerstone of the Hanumantha Nagar community in South Bengaluru, providing quality, value-based education at a nominal cost, accessible to children from all communities, irrespective of caste or religion.
+            </p>
+            <p>
+              The school was inaugurated on 15th December 1983 by Sri Purushottamji of Ramakrishna Ashram, Bengaluru. This day is observed every year as Founder’s Day, marked by cultural programs performed by the students of the school.
             </p>
           </div>
         </div>

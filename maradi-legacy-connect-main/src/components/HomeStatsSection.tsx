@@ -3,14 +3,15 @@ import { motion, useInView, useReducedMotion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
-import { Award, Users, Calendar } from "lucide-react";
+import { Award, Users, Calendar, Heart } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { icon: Calendar, value: "1972", label: "Founded" },
-  { icon: Award, value: "50+", label: "Years of Excellence" },
-  { icon: Users, value: "10,000+", label: "Lives Touched" },
+  { icon: Calendar, value: "52", label: "Years of Service" },
+  { icon: Users, value: "10K+", label: "Students Educated" },
+  { icon: Heart, value: "5K+", label: "Events Hosted" },
+  { icon: Award, value: "100%", label: "Community Focused" },
 ];
 
 export default function HomeStatsSection() {
@@ -47,12 +48,12 @@ export default function HomeStatsSection() {
     <motion.section
       ref={sectionRef}
       className="relative overflow-hidden bg-[hsl(175,35%,14%)] py-16 md:py-20"
-      initial={reduceMotion ? false : { opacity: 0 }}
-      animate={inView ? { opacity: 1 } : undefined}
+      initial={false}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4">
-        <div ref={itemsRef} className="grid gap-8 md:grid-cols-3 md:gap-12">
+        <div ref={itemsRef} className="grid gap-8 md:grid-cols-4 md:gap-8">
           {stats.map((stat) => (
             <div
               key={stat.label}

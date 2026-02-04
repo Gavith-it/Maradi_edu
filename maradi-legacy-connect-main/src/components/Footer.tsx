@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Mail, Phone, MapPin, Calendar, Users, Award, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import siteLogo from "@/assets/WhatsApp Image 2026-02-01 at 12.45.21.jpeg";
 
@@ -12,13 +12,11 @@ const Footer = () => {
           {/* Trust Information */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-5">
-              <div className="w-16 h-16 bg-white/95 rounded-full p-2 shadow-lg">
-                <img 
-                  src={siteLogo} 
-                  alt="Sri Maradi Subbiah Trust Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
+              <img 
+                src={siteLogo} 
+                alt="Sri Maradi Subbiah Trust Logo" 
+                className="h-16 w-auto object-contain"
+              />
               <h3 className="font-serif text-2xl font-bold">Maradi Subbaiah Trust</h3>
             </div>
             
@@ -79,40 +77,6 @@ const Footer = () => {
             </Button>
           </div>
 
-        </div>
-
-        {/* Stats Section */}
-        <div className="border-t border-heritage-dark mt-10 pt-8">
-          <div className="grid md:grid-cols-4 gap-6 mb-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Calendar className="w-5 h-5 text-heritage-gold" />
-                <span className="text-3xl font-bold text-heritage-gold">52</span>
-              </div>
-              <span className="text-gray-100 text-sm">Years of Service</span>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Users className="w-5 h-5 text-heritage-gold" />
-                <span className="text-3xl font-bold text-heritage-gold">10K+</span>
-              </div>
-              <span className="text-gray-100 text-sm">Students Educated</span>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Heart className="w-5 h-5 text-heritage-gold" />
-                <span className="text-3xl font-bold text-heritage-gold">5K+</span>
-              </div>
-              <span className="text-gray-100 text-sm">Events Hosted</span>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Award className="w-5 h-5 text-heritage-gold" />
-                <span className="text-3xl font-bold text-heritage-gold">100%</span>
-              </div>
-              <span className="text-gray-100 text-sm">Community Focused</span>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}
