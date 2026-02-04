@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Flower } from "lucide-react";
 import heroCampusImage from "@/assets/hero-campus.jpg";
-import culturalCeremony from "@/assets/cultural-ceremony.jpg";
 import weddingHall from "@/assets/wedding-hall.jpg";
+import schoolClassroom from "@/assets/school-classroom.jpg";
 
 const slides = [
   {
@@ -24,7 +24,7 @@ const slides = [
     accent: "from-amber-500/90 to-amber-600/90",
   },
   {
-    image: culturalCeremony,
+    image: schoolClassroom,
     title: "Daily Classes",
     subtitle: "Morning & Evening Sessions",
     description: "Hatha Yoga, Pranayama, and meditation guided by experienced instructors in a peaceful, traditional setting.",

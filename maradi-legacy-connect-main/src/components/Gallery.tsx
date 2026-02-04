@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import schoolClassroom from "@/assets/school-classroom.jpg";
-import culturalCeremony from "@/assets/cultural-ceremony.jpg";
+import heroCampus from "@/assets/hero-campus.jpg";
 import weddingHall from "@/assets/wedding-hall.jpg";
 
 const fadeInUp = {
@@ -39,7 +39,7 @@ const Gallery = () => {
       category: "Venues",
     },
     {
-      image: culturalCeremony,
+      image: heroCampus,
       title: "Cultural Preservation",
       description: "Keeping our rich heritage alive through traditional ceremonies",
       category: "Culture",

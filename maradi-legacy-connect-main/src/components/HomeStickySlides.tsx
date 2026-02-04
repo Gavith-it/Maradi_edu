@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Flower, Heart } from "lucide-react";
-import culturalCeremony from "@/assets/cultural-ceremony.jpg";
 import founderPortrait from "@/assets/founder-portrait.jpg";
 import heroCampus from "@/assets/hero-campus.jpg";
 
@@ -11,7 +10,7 @@ export default function HomeStickySlides() {
       <div className="sticky top-0 grid min-h-screen w-full grid-cols-1 items-center md:grid-cols-2">
         <div className="relative h-[50vh] w-full md:h-screen">
           <img
-            src={culturalCeremony}
+            src={heroCampus}
             alt="Yoga and wellness at Maradi Subbaiah Yoga Kendra"
             className="h-full w-full object-cover"
           />

@@ -1,7 +1,7 @@
-import culturalCeremony from "@/assets/cultural-ceremony.jpg";
-import schoolClassroom from "@/assets/school-classroom.jpg";
 import heroCampus from "@/assets/hero-campus.jpg";
-import founderPortrait from "@/assets/founder-portrait.jpg";
+import schoolClassroom from "@/assets/school-classroom.jpg";
+import weddingHall from "@/assets/wedding-hall.jpg";
+import festivalsImage from "@/assets/WhatsApp Image 2026-02-03 at 11.40.50 AM.jpeg";
 
 const cards = [
   {
@@ -9,28 +9,28 @@ const cards = [
     title: "Co-curricular\nActivities",
     description:
       "Fine Arts, Music, Dance, and Dramatics. The school emphasizes learning beyond the classroom through diverse creative and performing arts.",
-    circleImage: culturalCeremony,
+    circleImage: heroCampus,
   },
   {
     id: "instructors",
     title: "Professional\nInstructors",
     description:
       "Dedicated activity programs led by professional instructors for music, arts, and sports, nurturing each child's interests and talents.",
-    circleImage: schoolClassroom,
+    circleImage: weddingHall,
   },
   {
     id: "celebrations",
     title: "Festivals &\nFounder's Day",
     description:
       "Celebration of Independence Day, Dasara, Ganesha Chaturthi, Krishna Janmashtami, and Founder's Day as part of our value-based education.",
-    circleImage: heroCampus,
+    circleImage: festivalsImage,
   },
   {
     id: "competitions",
     title: "Competitions &\nSummer Camps",
     description:
       "Regular drawing and cultural competitions, and annual summer camps for children aged 6 to 13 years within the school premises.",
-    circleImage: founderPortrait,
+    circleImage: schoolClassroom,
   },
 ];
 

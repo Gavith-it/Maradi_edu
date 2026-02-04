@@ -1,5 +1,5 @@
 import schoolClassroom from "@/assets/school-classroom.jpg";
-import culturalCeremony from "@/assets/cultural-ceremony.jpg";
+import heroCampus from "@/assets/hero-campus.jpg";
 
 const cards = [
   {
@@ -13,7 +13,7 @@ const cards = [
   {
     id: "future",
     title: "Future Vision",
-    image: culturalCeremony,
+    image: heroCampus,
     imageAlt: "School community and vision",
     content:
       "Proposal to start evening tuition classes for needy students from Class 6 to 10 within the school premises, extending our mission of accessible, value-based education.",
